@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="icon" type="image/x-icon" href="https://static-00.iconduck.com/assets.00/calculator-minimalistic-icon-2048x2046-73qvgwb6.png">
+        <style>
+            .container{
+                background-color: grey;
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .calculator_body{
+                background: black;
+                height: 380px;
+                width: 250px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            #button{
+                height: 50px;
+                width: 50;
+                font-size: 20px;
+                margin: auto;
+                border-radius: 2px;
+                display: flex;
+                border: 0.5px solid grey;
+                justify-content: space-evenly;
+            }
+            #display{
+                height: 59px;
+                width: 100%;
+                border-radius: 5px;
+                margin-bottom: 10pX;
+                margin-top: 10px;
+                font-size: 35px;
+                background: rgba(255, 255, 255, 0.829);
+                border: white solid 1px;
+                color: black;
+            }
+            #equalsto{
+                height: 50px;
+                width: 164px;
+                border-radius: 2px;
+                margin-left: 4px;
+                font-size: 20px;
+                border: 0.5px solid grey;
+                background: rgb(70, 177, 177);
+                color: white;
+            }
+            #zero{
+                height: 50px;
+                width: 50px;
+                border-radius: 2px;
+                border: 0.5px solid grey;
+                margin-left: 15px;
+                font-size: 20px;
+                background: black;
+            }
+            .del{
+                color: white;
+                background: rgb(0, 112, 187);
+            }
+            .digit{
+                color: white;
+                background-color:   black;
+            }
+            .operator{
+                background-color: rgb(0, 112, 187);
+                font-weight: 900;
+                color: white;
+            }
+            .buttons1{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+            }
+            .buttons2{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+            }
+            .buttons3{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+            }
+            .buttons4{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 10px;
+            }
+            .digit{
+                color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <div class="calculator_body">
+            <div class="display">
+                <input type="text" name="display" id="display">
+            </div>
+            <div class="buttons1">
+                <input type="button" value="AC" id="button" class="del" onclick="display.value=''">
+                <input type="button" value="DE" id="button" class="del" onclick="display.value = display.value.toString().slice(0,-1)">
+                <input type="button" value="." id="button" class="digit" onclick="display.value+='.'">
+                <input type="button" value="+" id="button" class="operator" onclick="display.value+='+'">
+            </div>
+            <div class="buttons2">
+                <input type="button" value="9" id="button" class="digit" onclick="display.value+='9'">
+                <input type="button" value="8" id="button" class="digit" onclick="display.value+='8'">
+                <input type="button" value="7" id="button" class="digit" onclick="display.value+='7'">
+                <input type="button" value="-" id="button" class="operator" onclick="display.value+='-'">
+            </div>
+            <div class="buttons3">
+                <input type="button" value="6" id="button" class="digit" onclick="display.value+='6'">
+                <input type="button" value="5" id="button" class="digit" onclick="display.value+='5'">
+                <input type="button" value="4" id="button" class="digit" onclick="display.value+='4'">
+                <input type="button" value="*" id="button" class="operator" onclick="display.value+='*'">
+            </div>
+            <div class="buttons4">
+                <input type="button" value="3" id="button" class="digit" onclick="display.value+='3'">
+                <input type="button" value="2" id="button" class="digit" onclick="display.value+='2'">
+                <input type="button" value="1" id="button" class="digit" onclick="display.value+='1'">
+                <input type="button" value="/" id="button" class="operator" onclick="display.value+='/'">
+            </div>
+            <div class="buttons5">
+                <input type="button" value="0" id="zero" class="digit" onclick="display.value+='0'">
+                <input type="button" value="=" id="equalsto" class="operator" onclick="display.value = eval(display.value)">
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
